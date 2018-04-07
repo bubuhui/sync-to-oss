@@ -4,7 +4,6 @@ import datetime
 from util import loggerutil
 
 
-
 logger = loggerutil.initLogger('test_logger', 'D:\\test_logger.log')
 
 

@@ -5,16 +5,23 @@ from util import loggerutil
 
 
 some_conf = "../conf/someConf.ini"
+
+
 # 读取配置文件
 def get_conf_by_name(conf_name):
     cf = configparser.ConfigParser()
     cf.read(conf_name, encoding="utf-8-sig")
+    local_conf = cf.get("conf_path", "conf_path")
+    if local_conf:
+        cf.read(local_conf, encoding="utf-8-sig")
     return cf
 
 
 # 获取默认配置信息
 def get_default_bucket():
     cf = get_conf_by_name(some_conf)
+    # 先读一下配置文件
+
     access_key_id = cf.get('aliyun', 'access_key_id')
     access_key_secret = cf.get('aliyun', 'access_key_secret')
     endpoint = cf.get("aliyun", "endpoint")
