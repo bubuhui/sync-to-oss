@@ -3,12 +3,7 @@
 Modules/python.exp
 buildaix/
 installp/
-# .gitignore
-# Ignore everything in this directory  
-*  
-# Except this file  
-!.gitignore  
-!.gitkeep
+.gitignore
 
 # Two-trick pony for OSX and other case insensitive file systems:
 # Ignore ./python binary on Unix but still look into ./Python/ directory.
