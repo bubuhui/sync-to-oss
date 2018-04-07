@@ -4,7 +4,7 @@ import configparser
 from util import loggerutil
 
 
-some_conf = "../conf/someConf.ini"
+some_conf = "conf/someConf.ini"
 
 
 # 读取配置文件

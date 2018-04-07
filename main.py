@@ -5,12 +5,8 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import join,Table,MetaData,select,func,and_,Column,ForeignKey,Integer,String,DateTime,Text,Binary
-import sys
 
-print(12)
-print(sys.path)
-print(12)
-some_conf = "../conf/someConf.ini"
+some_conf = "conf/someConf.ini"
 cf = ossutil.get_conf_by_name(some_conf)
 oss_keys = cf.options("dir")
 
