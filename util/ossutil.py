@@ -13,6 +13,7 @@ def get_conf_by_name(conf_name):
     cf.read(conf_name, encoding="utf-8-sig")
     local_conf = cf.get("conf_path", "conf_path")
     if local_conf:
+        cf = configparser.ConfigParser()
         cf.read(local_conf, encoding="utf-8-sig")
     return cf
 

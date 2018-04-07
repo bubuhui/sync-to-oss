@@ -20,7 +20,6 @@ datetime_dt = datetime.date(2017, 2, 4)
 # today_time = time.mktime(today.timetuple())
 last_datetime = datetime.datetime.strptime(last_time_str, '%Y-%m-%d %H:%M:%S')
 last_time = time.mktime(last_datetime.timetuple())
-print(last_time)
 
 
 Base = declarative_base()
@@ -35,7 +34,7 @@ class OssFile(Base):
     local_path = Column("local_path", String(2000))
     upload_time = Column("upload_time", DateTime(), nullable=True)
 
-eng = create_engine('sqlite:///../db/sync_to_oss.db', echo=True)
+eng = create_engine('sqlite:///db/sync_to_oss.db', echo=True)
 DBSession = sessionmaker(bind=eng)
 
 for oss_key in oss_keys:
@@ -58,13 +57,13 @@ for oss_key in oss_keys:
         # session.add(new_oss_file)
         # session.commit()
         # session.close()
+        new_oss_file = oss_key + file.replace(local_path, "")
+        new_oss_file = new_oss_file.replace("\\", "/")
         result = ossutil.upload_to_oss(bucket, new_oss_file, file)
         if result.status == 200:
             print("文件：" + file + " 上传成功")
-            new_oss_file = oss_key + file.replace(local_path, "")
-            new_oss_file = new_oss_file.replace("\\", "/")
-            new_oss_file = OssFile(id=None, md5=md5, oss_path=new_oss_file, local_path=file,
+            insert_oss_file = OssFile(id=None, md5=md5, oss_path=new_oss_file, local_path=file,
                                    upload_time=datetime.datetime.now())
-            session.add(new_oss_file)
+            session.add(insert_oss_file)
             session.commit()
             session.close()
