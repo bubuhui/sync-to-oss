@@ -1,5 +1,5 @@
 create table oss_file (
-  id integer(20) PRIMARY KEY autoincrement,
+  id integer PRIMARY KEY autoincrement,
   md5 varchar(64),
   oss_path varchar(2000),
   local_path varchar(2000),
