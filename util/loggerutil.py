@@ -22,5 +22,5 @@ def initLogger(logger_name, logger_file):
 
 
 def get_default_logger():
-    logger = initLogger('test_logger', 'D:\\test_logger.log')
+    logger = initLogger('test_logger', 'logs/test_logger.log')
     return logger

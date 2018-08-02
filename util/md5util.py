@@ -1,7 +1,9 @@
 __author__ = 'bubuhui'
 from hashlib import md5
+from util import  loggerutil
 import os
 
+logger = loggerutil.get_default_logger()
 
 def cal_md5_for_str(str_data):     #check string的MD5值
     m = md5()

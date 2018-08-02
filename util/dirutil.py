@@ -1,14 +1,12 @@
 import os
-import time
-import datetime
 from util import loggerutil
 
 
-logger = loggerutil.initLogger('test_logger', 'D:\\test_logger.log')
+logger = loggerutil.get_default_logger()
 
 
 def find_modify_file(ori_path, last_upload_time, modify_file_list=[]):
-    print(ori_path)
+    logger.info(ori_path)
     parents = os.listdir(ori_path)
     for parent in parents:
         child = os.path.join(ori_path, parent)

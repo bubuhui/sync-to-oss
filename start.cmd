@@ -1,2 +1,5 @@
+rem echo off
 rem 后台启动python脚本
-start /b C:\Users\evan\PycharmProjects\sync-to-oss\main.py
+set BASE_DIR=%~dp0
+rem cd /d %BASE_DIR%
+start /b %BASE_DIR%\main.py
