@@ -1,0 +1,18 @@
+2018-08-02 12:51:54,616 - test_logger - INFO - C:\test123
+2018-08-02 12:51:54,616 - test_logger - INFO - C:\test123
+2018-08-02 12:51:54,616 - test_logger - INFO - C:\test123
+2018-08-02 12:51:54,620 - test_logger - INFO - C:\test123\aabd.txt
+2018-08-02 12:51:54,620 - test_logger - INFO - C:\test123\aabd.txt
+2018-08-02 12:51:54,620 - test_logger - INFO - C:\test123\aabd.txt
+2018-08-02 12:51:54,856 - test_logger - INFO - 文件：C:\test123\aabd.txt 上传成功
+2018-08-02 12:51:54,856 - test_logger - INFO - 文件：C:\test123\aabd.txt 上传成功
+2018-08-02 12:51:54,856 - test_logger - INFO - 文件：C:\test123\aabd.txt 上传成功
+2018-08-02 12:53:37,642 - test_logger - INFO - C:\test123
+2018-08-02 12:53:37,642 - test_logger - INFO - C:\test123
+2018-08-02 12:53:37,642 - test_logger - INFO - C:\test123
+2018-08-02 12:53:37,644 - test_logger - INFO - C:\test123\aabd.txt
+2018-08-02 12:53:37,644 - test_logger - INFO - C:\test123\aabd.txt
+2018-08-02 12:53:37,644 - test_logger - INFO - C:\test123\aabd.txt
+2018-08-02 12:53:37,890 - test_logger - INFO - 文件：C:\test123\aabd.txt 上传成功
+2018-08-02 12:53:37,890 - test_logger - INFO - 文件：C:\test123\aabd.txt 上传成功
+2018-08-02 12:53:37,890 - test_logger - INFO - 文件：C:\test123\aabd.txt 上传成功
